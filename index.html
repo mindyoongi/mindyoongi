@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>_mindyoongi · Jasa Desain &amp; Tukar Tiket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F0FD;--ink:#2B2145;--mute:#6B6288;--line:#DDD1F3;--card:#FFFFFF;--blue:#B79CED;--sun:#FFD166;--onblue:#2B2145;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1E1535;--ink:#F3EEFF;--mute:#BAAFDC;--line:#3A2D63;--card:#2A1F4A;--blue:#B79CED;--onblue:#2B2145;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1E1535;--ink:#F3EEFF;--mute:#BAAFDC;--line:#3A2D63;--card:#2A1F4A;--blue:#B79CED;--onblue:#2B2145;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 'Instrument Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque','Arial Black',sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:800 20px 'Bricolage Grotesque',sans-serif;text-decoration:none}
+nav a{margin-left:20px;text-decoration:none;font-weight:500;color:var(--mute)}
+nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 72px}
+.hero h1{font-size:clamp(44px,9vw,104px);font-weight:800;max-width:11ch}
+.hero p{max-width:46ch;color:var(--mute);font-size:19px;margin:24px 0 32px}
+.btn{display:inline-block;background:var(--blue);color:var(--onblue);padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:10px}
+.hero .tag{display:inline-block;background:var(--sun);color:#2B2145;padding:6px 14px;border-radius:999px;font-weight:600;font-size:15px;margin-bottom:22px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(32px,5vw,52px);margin-bottom:12px}
+.sub{color:var(--mute);max-width:52ch;margin:0 0 28px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filters button{font:500 15px 'Instrument Sans',sans-serif;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:9px 18px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.work{border-radius:18px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.work[hidden]{display:none}
+.art{aspect-ratio:4/3;display:grid;place-items:center;font:800 56px 'Bricolage Grotesque',sans-serif;color:#fff;position:relative}
+.art i{position:absolute;border-radius:50%;opacity:.9}
+.work div.info{padding:14px 16px}
+.work h3{font-size:20px}
+.work p{margin:4px 0 0;color:var(--mute);font-size:15px}
+.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.plan.hot{border:2px solid var(--blue)}
+.plan h3{font-size:24px}
+.plan .rp{font:800 34px 'Bricolage Grotesque',sans-serif;margin:10px 0}
+.plan ul{padding-left:20px;margin:0 0 20px;color:var(--mute)}
+.plan .btn{width:100%;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.steps h3{font-size:22px;margin-bottom:6px}
+.steps p{margin:0;color:var(--mute)}
+.cta{background:var(--blue);color:var(--onblue);border-radius:28px;padding:48px 32px;margin:0 0 56px}
+.cta h2{max-width:14ch}
+.cta .btn{background:var(--sun);color:#2B2145}
+.rules{margin:0;padding-left:20px;display:grid;gap:10px}
+footer{padding:0 0 40px;color:var(--mute);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.chips li{border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px}
+@media (max-width:560px){nav a:not(:last-child){display:none}.btn.alt{margin:10px 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.grid{display:block;columns:3 240px;column-gap:18px}
+.work{break-inside:avoid;margin:0 0 18px}
+.zoom{display:block;width:100%;padding:0;border:0;background:#fff;cursor:zoom-in}
+.zoom img{display:block;width:100%;height:auto}
+dialog{border:0;padding:0;background:transparent;max-width:92vw;max-height:92vh}
+dialog::backdrop{background:rgba(30,21,53,.85)}
+#lbi{display:block;max-width:92vw;max-height:90vh;margin:0 auto;border-radius:12px;background:#fff}
+
+/* _mindyoongi refresh */
+:root{--lavender-deep:#9274c7;--lavender-soft:#eee7fb;--shadow:0 14px 38px rgba(55,35,91,.08)}
+body{letter-spacing:-.01em}
+.wrap{max-width:1160px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:15px 0}
+.logo{letter-spacing:-.04em}
+nav a{font-size:14px}
+.hero{padding:clamp(58px,9vw,112px) 0 86px;position:relative}
+.hero:after{content:"✳";position:absolute;right:5%;top:22%;font-size:clamp(70px,12vw,150px);color:var(--blue);opacity:.45;pointer-events:none}
+.hero h1{max-width:12ch;letter-spacing:-.055em}
+.hero p{font-size:18px;line-height:1.75}
+.btn{transition:transform .2s ease,box-shadow .2s ease;background:var(--blue);box-shadow:0 8px 20px rgba(146,116,199,.18)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(146,116,199,.25)}
+.btn.alt{box-shadow:none}
+section{padding:clamp(52px,7vw,82px) 0}
+section h2{letter-spacing:-.045em}
+.sub{line-height:1.75}
+.work{box-shadow:0 5px 20px rgba(55,35,91,.04);transition:transform .2s ease,box-shadow .2s ease}
+.work:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.work .info{min-height:76px}
+.zoom{background:var(--card)}
+.zoom img{object-fit:cover}
+.filters button{transition:all .18s ease}
+.filters button:hover{border-color:var(--blue)}
+.plan{box-shadow:0 6px 24px rgba(55,35,91,.04)}
+.plan.hot{box-shadow:var(--shadow)}
+.plan .rp{letter-spacing:-.05em}
+.steps>div{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+.steps h3{letter-spacing:-.03em}
+.cta{box-shadow:var(--shadow);position:relative;overflow:hidden}
+.cta:after{content:"✦";position:absolute;right:28px;bottom:-42px;font-size:180px;opacity:.12;pointer-events:none}
+.chips li{background:var(--bg)}
+#order{scroll-margin-top:90px}
+.order-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:22px;align-items:start}
+.order-form,.order-aside,.faq-item{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.order-form{box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:14px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 13px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--lavender-deep);box-shadow:0 0 0 3px rgba(146,116,199,.15)}
+.field textarea{min-height:110px;resize:vertical}
+.field small,.hint{color:var(--mute);font-size:13px}
+.order-form .btn{border:0;width:100%;cursor:pointer;font:600 16px 'Instrument Sans',sans-serif;margin-top:18px}
+.order-aside h3{font-size:23px;margin-bottom:12px}
+.order-aside ul{padding-left:19px;color:var(--mute);display:grid;gap:10px}
+.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.faq-item h3{font-size:18px;margin-bottom:8px}
+.faq-item p{margin:0;color:var(--mute);font-size:15px}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--lavender-deep);margin-bottom:12px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.section-head .sub{margin-bottom:0}
+footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+@media(max-width:700px){.order-layout{grid-template-columns:1fr}.faq-list{grid-template-columns:1fr}.hero:after{right:2%;top:10%;opacity:.22}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section-head{display:block}.section-head .sub{margin-top:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+.newbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:-30px 0 56px;padding:14px 18px;border:1.5px solid var(--line);border-radius:18px;background:var(--card);text-decoration:none;font-weight:500}
+.newbar b{background:var(--sun);color:#2B2145;border-radius:999px;padding:3px 12px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.newbar span:last-child{margin-left:auto;color:var(--lavender-deep);font-weight:600}
+.tiket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.prow{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-weight:600}
+.prow span:last-child{font-family:'Bricolage Grotesque',sans-serif;font-weight:800}
+.pnote{margin:16px 0 0;color:var(--mute);font-size:15px}
+.tiket-cta{margin-top:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#top">_mindyoongi</a>
+  <nav><a href="#karya">Karya</a><a href="#harga">Harga</a><a href="#alur">Cara pesan</a><a href="#ketentuan">Ketentuan</a><a href="#tiket">Tukar Tiket</a><a href="#order">Order</a></nav>
+</header>
+
+<main id="top">
+<div class="hero" lang="en">
+  <div class="eyebrow">_MINDYOONGI · HOMEPAGE PREVIEW</div>
+  <h1>From your mind to the design.</h1>
+  <p>Your ideas, your vibe, your own little design. Let’s make something you’ll love.</p>
+  <a class="btn" href="#karya">Explore my works</a><a class="btn alt" href="#order">Order a design</a>
+</div>
+
+<a class="newbar" href="#tiket"><b>Baru</b><span>Jasa Tukar Tiket BTS Arirang in Jakarta 2026</span><span>Lihat detail →</span></a>
+
+<section id="karya">
+  <h2>Karya terpilih</h2>
+  <p class="sub">Pilih kategori, lalu klik gambar untuk memperbesar.</p>
+  <div class="filters" id="filters">
+    <button aria-pressed="true" data-f="all">Semua</button>
+    <button aria-pressed="false" data-f="Merch">Merchandise</button>
+    <button aria-pressed="false" data-f="Sosmed">Sosial media</button>
+    <button aria-pressed="false" data-f="Stiker">Stiker</button>
+    <button aria-pressed="false" data-f="Packing">Alas Packing</button>
+    <button aria-pressed="false" data-f="Hairclip">Alas Hair Clip</button>
+    <button aria-pressed="false" data-f="Cover">Cover Notebook</button>
+    <button aria-pressed="false" data-f="Poster">Poster &amp; Banner</button>
+    <button aria-pressed="false" data-f="Kartu">Kartu Ucapan</button>
+    <button aria-pressed="false" data-f="Qris">Qris Deco</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="harga">
+  <h2>Paket harga</h2>
+  <p class="sub">Setiap project punya kebutuhan yang berbeda. Harga akhir akan dikonfirmasi setelah brief, ukuran, dan tingkat detail desain dibahas.</p>
+  <div class="price" style="grid-template-columns:1fr">
+    <div class="plan hot"><div class="eyebrow">Starting price</div><h3>Desain custom</h3><div class="rp">Rp15.000<span style="font:500 14px Instrument Sans,sans-serif;letter-spacing:0"> / desain</span></div>
+      <ul class="chips"><li>Keychain</li><li>Poster</li><li>Pin Button</li><li>Photo Frame</li><li>Qris Deco</li><li>Sticker Sheet</li><li>Header Twitter/X</li><li>Story Instagram</li><li>Feed Instagram</li><li>Lanyard</li><li>Hand Banner</li><li>Birthday Project</li><li>Desain by request</li></ul>
+      <a class="btn" href="#order">Minta estimasi harga</a></div>
+  </div>
+</section>
+
+<section id="alur">
+  <h2>Cara pesan</h2>
+  <p class="sub">Prosesnya singkat dan jelas.</p>
+  <div class="steps">
+    <div><h3>1. Ceritakan kebutuhanmu</h3><p>Kirim brief lewat WhatsApp: tema, ukuran, referensi, dan isi desain.</p></div>
+    <div><h3>2. Sepakati harga</h3><p>Aku kasih harga sesuai tingkat kesulitan desain. Pengerjaan mulai setelah kita sepakat.</p></div>
+    <div><h3>3. Terima draf &amp; revisi</h3><p>Desain akan dikirimkan untuk kamu review. Berikan feedback jika ada bagian yang ingin direvisi sebelum desain final.</p></div>
+    <div><h3>4. Terima file final</h3><p>File final dikirim lewat email dalam format PNG, JPG, atau PDF.</p></div>
+  </div>
+</section>
+
+<section id="ketentuan">
+  <h2>Ketentuan order</h2>
+  <p class="sub">Baca dulu sebelum pesan ya.</p>
+  <div class="plan"><ul class="rules">
+    <li>Harga mulai dari Rp15.000, tergantung tingkat kesulitan desain.</li>
+    <li>Selain item yang tertera, bisa desain by request.</li>
+    <li>Wajib memberikan brief yang jelas: tema, ukuran, referensi, dan isi desain.</li>
+    <li>File final dikirim dalam format PNG/JPG/PDF melalui email.</li>
+    <li>Tidak menerima pembatalan atau refund setelah proses desain dimulai.</li>
+  </ul></div>
+</section>
+
+
+<section id="tiket">
+  <div class="eyebrow">New service</div>
+  <h2>Jasa Tukar Tiket</h2>
+  <p class="sub">BTS World Tour “Arirang” in Jakarta 2026. Kamu tidak perlu antre di venue, dokumennya kami bantu siapkan.</p>
+  <div class="tiket-grid">
+    <div class="plan">
+      <h3>Benefit pakai jasa tukar tiket</h3>
+      <ul class="rules" style="margin-top:14px;color:var(--mute)">
+        <li>Tidak perlu datang ke venue untuk penukaran.</li>
+        <li>Dokumen dibantu disiapkan.</li>
+        <li>Tidak perlu beli materai.</li>
+        <li>Dapat update selama proses.</li>
+        <li>Terima tiket fisik (wristband) langsung di venue GBK, atau dikirim oleh kami (sesuai S&amp;K).</li>
+        <li>Dapat freebies menarik.</li>
+        <li>Masuk grup WhatsApp.</li>
+      </ul>
+    </div>
+    <div class="plan hot">
+      <div class="eyebrow">Pricelist</div>
+      <h3>Paket untuk 1 nama</h3>
+      <div style="margin-top:10px">
+        <div class="prow"><span>1 tiket</span><span>Rp50.000</span></div>
+        <div class="prow"><span>2 tiket</span><span>Rp90.000</span></div>
+        <div class="prow"><span>3 tiket</span><span>Rp130.000</span></div>
+        <div class="prow"><span>4 tiket</span><span>Rp160.000</span></div>
+      </div>
+      <h3 style="margin-top:22px">Tiket beda nama</h3>
+      <div class="prow" style="margin-top:6px"><span>1 tiket</span><span>Rp50.000</span></div>
+      <p class="pnote"><b>Sudah termasuk:</b> print dokumen, e-ticket, surat kuasa, dan materai.<br><b>Down payment:</b> Rp10.000.</p>
+    </div>
+  </div>
+  <div class="plan" style="margin-top:18px">
+    <div class="eyebrow">Term &amp; Condition</div>
+    <h3>Ketentuan jasa tukar tiket</h3>
+    <ul class="rules" style="margin-top:14px;color:var(--mute)">
+      <li>DP Rp10.000 wajib dibayarkan untuk mengamankan slot penukaran.</li>
+      <li>DP bersifat <b>non-refundable</b>. Jika customer membatalkan, DP yang sudah dibayarkan akan hangus.</li>
+      <li>Jika batal ikut, customer boleh mencari pengganti agar DP ga terbuang sia-sia.</li>
+      <li>Pastikan semua data yang dikirim sudah benar dan sesuai agar ga terjadi kesalahan saat penukaran tiket.</li>
+      <li>1 kode booking = 1 GForm. Setiap order wajib mengisi GForm secara terpisah. Order ID tiket dan data pendukung dikirim melalui WhatsApp setelah DP dikonfirmasi.</li>
+      <li>Customer wajib bergabung ke grup WhatsApp untuk mendapatkan informasi dan update selama proses penukaran.</li>
+      <li>Data customer dijaga kerahasiaannya dan hanya digunakan untuk keperluan proses penukaran tiket.</li>
+      <li><b>Kami tidak pernah meminta password, kode OTP, atau akses login akunmu.</b></li>
+    </ul>
+    <p class="pnote"><b>Dengan melakukan booking, customer dianggap sudah membaca dan menyetujui seluruh ketentuan di atas.</b></p>
+  </div>
+  <div class="tiket-cta">
+    <a class="btn" href="https://wa.me/6285954100745?text=Halo%20_mindyoongi%21%20Aku%20mau%20pakai%20jasa%20tukar%20tiket%20BTS%20Arirang%20in%20Jakarta%202026.%0A%0AJumlah%20tiket%3A%0ANama%20di%20tiket%3A%0ATanggal%20show%3A" target="_blank" rel="noopener">Pesan jasa tukar tiket</a>
+    <span class="hint">Dengan memesan, kamu menyetujui Term &amp; Condition di atas.</span>
+  </div>
+</section>
+
+<section id="order">
+  <div class="eyebrow">Let's make something</div>
+  <h2>Mulai project kamu</h2>
+  <p class="sub">Isi detail awal di bawah ini. Form akan menyiapkan pesan WhatsApp supaya kebutuhan desainmu lebih mudah dibahas.</p>
+  <div class="order-layout">
+    <form class="order-form" id="orderForm">
+      <h3 style="font:700 24px 'Bricolage Grotesque';margin:0 0 18px">Form pemesanan</h3>
+      <div class="form-grid">
+        <div class="field">
+          <label for="customerName">Nama / username *</label>
+          <input id="customerName" name="customerName" placeholder="Nama kamu" required maxlength="80">
+        </div>
+        <div class="field">
+          <label for="service">Jenis desain *</label>
+          <select id="service" name="service" required>
+            <option value="">Pilih layanan</option>
+            <option>Merchandise (keychain, pouch, lanyard, dll.)</option>
+            <option>Konten sosial media</option>
+            <option>Stiker / sticker sheet</option>
+            <option>Alas packing / alas hair clip</option>
+            <option>Cover notebook</option>
+            <option>Poster / banner</option>
+            <option>Kartu ucapan / thanks card</option>
+            <option>QRIS deco</option>
+            <option>Birthday project</option>
+            <option>Custom / lainnya</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="size">Ukuran / spesifikasi</label>
+          <input id="size" name="size" placeholder="Contoh: 5 × 5 cm">
+        </div>
+        <div class="field">
+          <label for="deadline">Deadline / tanggal dibutuhkan</label>
+          <input id="deadline" name="deadline" type="date">
+        </div>
+        <div class="field">
+          <label for="budget">Perkiraan budget</label>
+          <select id="budget" name="budget">
+            <option value="Belum ditentukan">Belum ditentukan</option>
+            <option>Rp15.000–Rp30.000</option>
+            <option>Rp30.000–Rp50.000</option>
+            <option>Rp50.000–Rp100.000</option>
+            <option>Di atas Rp100.000</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="reference">Link referensi (opsional)</label>
+          <input id="reference" name="reference" type="url" placeholder="https://">
+        </div>
+        <div class="field full">
+          <label for="brief">Ceritakan konsep / brief *</label>
+          <textarea id="brief" name="brief" placeholder="Tema, warna, teks/foto yang akan digunakan, jumlah desain, dan detail lainnya..." required maxlength="1200"></textarea>
+          <small>Jangan kirim data pembayaran atau informasi pribadi yang sensitif melalui kolom ini.</small>
+        </div>
+      </div>
+      <button class="btn" type="submit">Kirim brief via WhatsApp ↗</button>
+      <p class="hint" style="margin:12px 0 0">Dengan mengirim form, kamu akan diarahkan ke WhatsApp untuk melanjutkan konsultasi. Order belum otomatis dikonfirmasi.</p>
+    </form>
+    <aside class="order-aside">
+      <div class="eyebrow">Before you order</div>
+      <h3>Supaya prosesnya lancar</h3>
+      <ul>
+        <li>Siapkan referensi visual jika sudah ada.</li>
+        <li>Pastikan ukuran dan kebutuhan cetak sudah diketahui, jika desain untuk produk fisik.</li>
+        <li>Jadwal pengerjaan dikonfirmasi sebelum pembayaran.</li>
+        <li>Harga final dan detail pembayaran akan diinformasikan melalui WhatsApp.</li>
+      </ul>
+      <p class="hint">Masih bingung menentukan layanan? Kamu bisa konsultasi dulu tanpa mengisi semua detail.</p>
+      <a class="btn alt" href="https://wa.me/6285954100745?text=Halo%20_mindyoongi%2C%20aku%20mau%20konsultasi%20soal%20jasa%20desain." target="_blank" rel="noopener" style="display:block;text-align:center;margin:18px 0 0">Konsultasi dulu</a>
+    </aside>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="eyebrow">Good to know</div>
+  <h2>Frequently asked questions</h2>
+  <p class="sub">Beberapa hal yang sering ditanyakan sebelum memulai order.</p>
+  <div class="faq-list">
+    <div class="faq-item"><h3>Bisa request desain di luar portfolio?</h3><p>Bisa. Ceritakan kebutuhan dan referensinya melalui form order atau WhatsApp untuk dicek terlebih dahulu.</p></div>
+    <div class="faq-item"><h3>Apakah harga selalu Rp15.000?</h3><p>Rp15.000 adalah harga mulai. Harga akhir mengikuti tingkat kesulitan dan detail setiap project.</p></div>
+    <div class="faq-item"><h3>Apakah bisa revisi?</h3><p>Bisa. Jumlah revisi dan batas perubahan akan disepakati sebelum pengerjaan dimulai.</p></div>
+    <div class="faq-item"><h3>Bagaimana cara menerima file?</h3><p>File final dikirim secara digital dalam format yang sudah disepakati, misalnya PNG, JPG, atau PDF.</p></div>
+  </div>
+</section>
+
+<section id="kontak" style="border:0;padding-bottom:0">
+  <div class="cta">
+    <h2>Siap mulai desainmu?</h2>
+    <p style="max-width:44ch;margin:14px 0 26px">Punya ide yang ingin diwujudkan? Hubungi untuk konsultasi, cek jadwal, dan estimasi harga. Kamu juga bisa DM Instagram <a href="https://www.instagram.com/_mindyoongi/" target="_blank" rel="noopener" style="font-weight:700;text-decoration:underline">@_mindyoongi</a>.</p>
+    <a class="btn" href="https://wa.me/6285954100745?text=Halo%20_mindyoongi%2C%20aku%20mau%20konsultasi%20dan%20pesan%20desain." target="_blank" rel="noopener">Chat WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer><span>© 2026 _mindyoongi · Made with creativity.</span><span><a href="https://www.instagram.com/_mindyoongi/" target="_blank" rel="noopener">Instagram</a> · WhatsApp +62 859-5410-0745</span></footer>
+</div>
+
+<dialog id="lb" aria-label="Pratinjau karya"><img id="lbi" alt=""></dialog>
+<script>
+/* DAFTAR KARYA
+   Untuk menambah karya: taruh gambar di folder "images", lalu salin satu baris di bawah dan ganti isinya.
+   t = judul, d = keterangan, c = kategori (Merch / Sosmed / Stiker / Packing / Hairclip / Cover / Kartu / Poster / Qris)
+   w = lebar gambar (piksel), h = tinggi gambar (piksel), s = lokasi file gambar */
+var works=[
+ {t:"Story Instagram",c:"Sosmed",d:"Kutipan dan judul lagu",w:236,h:419,s:"images/story-instagram-1.png"},
+ {t:"Story Instagram",c:"Sosmed",d:"Profil dan lirik lagu",w:236,h:419,s:"images/story-instagram-2.png"},
+ {t:"Keychain",c:"Merch",d:"Gantungan kunci bulat",w:116,h:205,s:"images/keychain-1.png"},
+ {t:"Uchiwa Hand Fan",c:"Merch",d:"Kipas tangan bermotif",w:311,h:476,s:"images/uchiwa-hand-fan-1.png"},
+ {t:"Desain Kaos",c:"Merch",d:"Kaos pre-order",w:206,h:366,s:"images/kaos-1.png"},
+ {t:"Desain Kaos",c:"Merch",d:"Kaos tema album",w:206,h:366,s:"images/kaos-2.png"},
+ {t:"Desain Kaos",c:"Merch",d:"Desain untuk bagian depan kaos",w:206,h:366,s:"images/kaos-3.png"},
+ {t:"Feed Instagram",c:"Sosmed",d:"Ucapan Hari Raya Nyepi",w:292,h:364,s:"images/feed-instagram-1.png"},
+ {t:"Feed Instagram",c:"Sosmed",d:"Ucapan Idul Fitri",w:292,h:364,s:"images/feed-instagram-2.png"},
+ {t:"Stiker Produk",c:"Stiker",d:"Desain label stiker",w:329,h:438,s:"images/stiker-produk-1.png"},
+ {t:"Pouch",c:"Merch",d:"Tas serut dengan cetak foto",w:381,h:362,s:"images/pouch-1.png"},
+ {t:"Pouch",c:"Merch",d:"Tas serut dengan cetak foto",w:381,h:362,s:"images/pouch-2.png"},
+ {t:"Lanyard",c:"Merch",d:"Tali lanyard bermotif",w:495,h:69,s:"images/lanyard-1.png"},
+ {t:"Qris Deco",c:"Qris",d:"Dekorasi QRIS gaya scrapbook",w:360,h:450,s:"images/qris-deco-1.png"},
+ {t:"Qris Deco",c:"Qris",d:"Dekorasi QRIS untuk jualan",w:328,h:464,s:"images/qris-deco-2.png"},
+ {t:"Header Twitter/X",c:"Sosmed",d:"Header profil",w:562,h:281,s:"images/header-twitter-1.png"},
+ {t:"Banner Ucapan",c:"Sosmed",d:"Banner ulang tahun",w:546,h:308,s:"images/banner-ucapan-1.png"},
+ {t:"Story Instagram",c:"Sosmed",d:"Kolase story",w:233,h:414,s:"images/story-instagram-3.png"},
+ {t:"Alas Packing",c:"Packing",d:"Bingkai merah motif tradisional",w:1000,h:1500,s:"images/alas-packing-1.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Bingkai merah dengan foto grup",w:1000,h:1500,s:"images/alas-packing-2.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema lampion dan bunga sakura",w:1000,h:1500,s:"images/alas-packing-3.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema pelaut dan kapal layar",w:1000,h:1500,s:"images/alas-packing-4.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Kertas kusut warna pink",w:1000,h:1500,s:"images/alas-packing-5.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Kertas kusut warna putih",w:1000,h:1500,s:"images/alas-packing-6.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema piringan hitam",w:1000,h:1500,s:"images/alas-packing-7.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Kertas kusut motif pola",w:1000,h:666,s:"images/alas-packing-8.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Ungu pastel dengan bingkai foto",w:1000,h:666,s:"images/alas-packing-9.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Kolase polaroid merah",w:1000,h:1500,s:"images/alas-packing-10.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema lampion dan sakura versi merah",w:1000,h:1500,s:"images/alas-packing-11.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Motif rasi bintang",w:1000,h:1500,s:"images/alas-packing-12.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Motif logo dan tanda tangan",w:1000,h:1500,s:"images/alas-packing-13.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Kolase merah",w:1000,h:1500,s:"images/alas-packing-14.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Kolase putih",w:1000,h:1500,s:"images/alas-packing-15.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Bingkai merah motif awan",w:1000,h:1500,s:"images/alas-packing-16.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover depan merah gradasi",w:1000,h:1419,s:"images/cover-notebook-1.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Halaman dalam motif gingham",w:1000,h:1419,s:"images/cover-notebook-2.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover merah dengan foto grup",w:1000,h:1419,s:"images/cover-notebook-3.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover kolase dengan daftar lagu",w:1000,h:1419,s:"images/cover-notebook-4.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover belakang",w:1000,h:1419,s:"images/cover-notebook-5.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover kolase polaroid merah",w:1000,h:1419,s:"images/cover-notebook-6.webp"},
+ {t:"Paper Greeting",c:"Kartu",d:"Kertas ucapan motif kotak dengan coretan merah",w:1000,h:714,s:"images/paper-greeting-1.webp"},
+ {t:"Paper Greeting",c:"Kartu",d:"Kertas ucapan bergaya kertas sobek merah",w:1000,h:714,s:"images/paper-greeting-2.webp"},
+ {t:"Paper Greeting",c:"Kartu",d:"Kertas ucapan kolase merah dengan daftar lagu",w:1000,h:714,s:"images/paper-greeting-3.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Latar krem dengan foto grup dan kaset",w:731,h:1196,s:"images/alas-packing-17.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Kertas sobek merah dengan foto grup",w:731,h:1196,s:"images/alas-packing-18.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Latar kotak dengan coretan merah",w:731,h:1196,s:"images/alas-packing-19.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Versi Jakarta dengan foto grup",w:863,h:1262,s:"images/alas-packing-20.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover kolase tiga panel",w:1000,h:1410,s:"images/cover-notebook-7.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover kolase daftar lagu, versi foto hitam",w:1000,h:1410,s:"images/cover-notebook-8.webp"},
+ {t:"Cover Notebook",c:"Cover",d:"Cover merah dengan judul besar",w:1000,h:1410,s:"images/cover-notebook-9.webp"},
+ {t:"Info Freebies",c:"Sosmed",d:"Poster info pembagian freebies",w:1000,h:1250,s:"images/info-freebies-1.webp"},
+ {t:"Keychain",c:"Merch",d:"Bingkai prangko dengan kucing",w:1000,h:1000,s:"images/keychain-2.webp"},
+ {t:"Keychain",c:"Merch",d:"Bingkai prangko latar merah",w:1000,h:1000,s:"images/keychain-3.webp"},
+ {t:"Keychain",c:"Merch",d:"Kolase prangko dengan kutipan",w:1000,h:1000,s:"images/keychain-4.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Versi lebar dengan dua tema warna",w:1000,h:600,s:"images/alas-packing-21.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Polaroid dengan ilustrasi kucing",w:1000,h:1667,s:"images/alas-packing-22.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Bingkai oval gradasi pink",w:1000,h:1667,s:"images/alas-packing-23.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Gaya imut warna pink",w:1000,h:1667,s:"images/alas-packing-24.webp"},
+ {t:"Alas Hair Clip",c:"Hairclip",d:"Tema bunga dan kupu-kupu ungu pastel",w:1000,h:1000,s:"images/alas-hair-clip-1.webp"},
+ {t:"Alas Hair Clip",c:"Hairclip",d:"Versi freebies tema bunga dan kupu-kupu",w:1000,h:1000,s:"images/alas-hair-clip-2.webp"},
+ {t:"Alas Hair Clip",c:"Hairclip",d:"Tema bintang ungu gelap",w:1000,h:1000,s:"images/alas-hair-clip-3.webp"},
+ {t:"Alas Hair Clip",c:"Hairclip",d:"Tema bunga ungu",w:1000,h:1000,s:"images/alas-hair-clip-4.webp"},
+ {t:"Alas Hair Clip",c:"Hairclip",d:"Bingkai oval dengan kupu-kupu",w:1000,h:1000,s:"images/alas-hair-clip-5.webp"},
+ {t:"Alas Hair Clip",c:"Hairclip",d:"Bingkai emas berornamen",w:1000,h:1000,s:"images/alas-hair-clip-6.webp"},
+ {t:"Feed Carousel",c:"Sosmed",d:"Slide 1: cover jasa tukar tiket",w:1000,h:1333,s:"images/feed-carousel-1.webp"},
+ {t:"Feed Carousel",c:"Sosmed",d:"Slide 2: daftar benefit",w:1000,h:1333,s:"images/feed-carousel-2.webp"},
+ {t:"Feed Carousel",c:"Sosmed",d:"Slide 3: pricelist",w:1000,h:1333,s:"images/feed-carousel-3.webp"},
+ {t:"Sticker Sheet",c:"Stiker",d:"Stiker chibi bertema Hooligan",w:1000,h:1410,s:"images/sticker-sheet-3.webp"},
+ {t:"Sticker Sheet",c:"Stiker",d:"Stiker bertema meme war tiket",w:1000,h:1410,s:"images/sticker-sheet-4.webp"},
+ {t:"Sticker Sheet",c:"Stiker",d:"Stiker bertema meme war tiket, versi 2",w:1000,h:1410,s:"images/sticker-sheet-5.webp"},
+ {t:"Keychain",c:"Merch",d:"Mockup gantungan kunci akrilik",w:790,h:1209,s:"images/keychain-5.webp"},
+ {t:"Pouch",c:"Merch",d:"Mockup tas serut tema Arirang",w:1000,h:830,s:"images/pouch-3.webp"},
+ {t:"Pouch",c:"Merch",d:"Mockup tas serut dengan bingkai hati",w:1000,h:1094,s:"images/pouch-4.webp"},
+ {t:"Thanks Card",c:"Kartu",d:"Motif awan dan siluet kota",w:1000,h:667,s:"images/thanks-card-1.webp"},
+ {t:"Thanks Card",c:"Kartu",d:"Gaya manis dengan lightstick",w:1000,h:667,s:"images/thanks-card-2.webp"},
+ {t:"Thanks Card",c:"Kartu",d:"Warna merah dan kuning",w:1000,h:667,s:"images/thanks-card-3.webp"},
+ {t:"Hand Banner",c:"Poster",d:"Banner ulang tahun nuansa denim biru",w:1200,h:400,s:"images/hand-banner-1.webp"},
+ {t:"Hand Banner",c:"Poster",d:"Banner ulang tahun nuansa pink peach",w:1200,h:400,s:"images/hand-banner-2.webp"},
+ {t:"Poster",c:"Poster",d:"Poster info acara ulang tahun, biru dan pink",w:1000,h:1418,s:"images/poster-1.webp"},
+ {t:"Poster",c:"Poster",d:"Poster ulang tahun gaya kolase biru",w:1000,h:1418,s:"images/poster-2.webp"},
+ {t:"Poster",c:"Poster",d:"Poster info acara ulang tahun yang elegan",w:1000,h:1418,s:"images/poster-3.webp"},
+ {t:"Poster",c:"Poster",d:"Poster ulang tahun gaya retro krem",w:1000,h:1418,s:"images/poster-4.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema matahari dan bulan",w:1000,h:1500,s:"images/alas-packing-25.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema matahari dan bulan, versi gradasi",w:1000,h:1500,s:"images/alas-packing-26.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema langit malam biru",w:1000,h:1500,s:"images/alas-packing-27.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Tema biru dengan foto polaroid",w:1000,h:1500,s:"images/alas-packing-28.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Gradasi dengan bingkai lengkung",w:1000,h:1500,s:"images/alas-packing-29.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Chibi dengan motif matahari dan bulan ungu",w:1000,h:1000,s:"images/alas-packing-30.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Chibi dengan ornamen bulan ungu",w:1000,h:1000,s:"images/alas-packing-31.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Chibi dengan lingkaran bintang ungu",w:1000,h:1000,s:"images/alas-packing-32.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Chibi dengan latar polkadot biru",w:1000,h:1000,s:"images/alas-packing-33.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Bingkai bergelombang motif matahari dan bulan",w:1000,h:1400,s:"images/alas-packing-34.webp"},
+ {t:"Alas Packing",c:"Packing",d:"Gradasi ungu dengan ilustrasi chibi",w:1000,h:1400,s:"images/alas-packing-35.webp"}
+];
+var grid=document.getElementById('grid');
+works.forEach(function(w){
+ var e=document.createElement('article');e.className='work';e.dataset.c=w.c;
+ e.innerHTML='<button class="zoom" aria-label="Perbesar '+w.t+'"><img src="'+w.s+'" width="'+w.w+'" height="'+w.h+'" alt="'+w.t+': '+w.d+'" loading="lazy"></button><div class="info"><h3>'+w.t+'</h3><p>'+w.d+'</p></div>';
+ grid.appendChild(e);
+});
+var lb=document.getElementById('lb'),lbi=document.getElementById('lbi');
+grid.addEventListener('click',function(ev){var i=ev.target.closest('img');if(!i)return;lbi.src=i.src;lbi.alt=i.alt;lb.showModal();});
+lb.addEventListener('click',function(){lb.close();});
+document.getElementById('filters').addEventListener('click',function(ev){
+ var b=ev.target.closest('button');if(!b)return;
+ document.querySelectorAll('#filters button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+ var f=b.dataset.f;
+ document.querySelectorAll('.work').forEach(function(w){w.hidden=!(f==='all'||w.dataset.c===f)});
+});
+</script>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit',function(event){
+  event.preventDefault();
+  var form=event.currentTarget;
+  if(!form.reportValidity()) return;
+  var v=function(id){return document.getElementById(id).value.trim()||'-';};
+  var message=[
+    'Halo _mindyoongi! Aku mau konsultasi / order desain.',
+    '',
+    '*Nama / username:* '+v('customerName'),
+    '*Jenis desain:* '+v('service'),
+    '*Ukuran / spesifikasi:* '+v('size'),
+    '*Deadline:* '+v('deadline'),
+    '*Perkiraan budget:* '+v('budget'),
+    '*Link referensi:* '+v('reference'),
+    '*Brief:* '+v('brief'),
+    '',
+    'Boleh info estimasi harga dan jadwal pengerjaannya?'
+  ].join('\n');
+  window.open('https://wa.me/6285954100745?text='+encodeURIComponent(message),'_blank','noopener');
+});
+</script>
+
+</body>
+</html>
